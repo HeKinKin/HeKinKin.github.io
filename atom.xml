@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://heKinKin.github.io/"/>
-  <updated>2019-08-01T07:46:01.834Z</updated>
+  <updated>2019-08-01T08:43:59.642Z</updated>
   <id>http://heKinKin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://heKinKin.github.io/2019/08/01/hi/"/>
     <id>http://heKinKin.github.io/2019/08/01/hi/</id>
     <published>2019-08-01T07:45:49.563Z</published>
-    <updated>2019-08-01T07:46:01.834Z</updated>
+    <updated>2019-08-01T08:43:59.642Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
     
     </summary>
     
+      <category term="你好" scheme="http://heKinKin.github.io/categories/%E4%BD%A0%E5%A5%BD/"/>
+    
+    
+      <category term="测试" scheme="http://heKinKin.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
