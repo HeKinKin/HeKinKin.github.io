@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HeXin</title>
+  
+  <subtitle>Welcome!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://heKinKin.github.io/"/>
+  <updated>2019-08-01T07:46:01.834Z</updated>
+  <id>http://heKinKin.github.io/</id>
+  
+  <author>
+    <name>James He</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hi</title>
+    <link href="http://heKinKin.github.io/2019/08/01/hi/"/>
+    <id>http://heKinKin.github.io/2019/08/01/hi/</id>
+    <published>2019-08-01T07:45:49.563Z</published>
+    <updated>2019-08-01T07:46:01.834Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://heKinKin.github.io/2019/07/31/hello-world/"/>
+    <id>http://heKinKin.github.io/2019/07/31/hello-world/</id>
+    <published>2019-07-31T07:46:29.119Z</published>
+    <updated>2019-07-31T07:46:29.119Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
