@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HeXin</title>
   
-  <subtitle>Welcome!</subtitle>
+  <subtitle>Hi!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://heKinKin.github.io/"/>
-  <updated>2019-08-01T08:43:59.642Z</updated>
+  <updated>2019-08-03T16:00:43.578Z</updated>
   <id>http://heKinKin.github.io/</id>
   
   <author>
-    <name>James He</name>
+    <name>HeXin</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hi</title>
-    <link href="http://heKinKin.github.io/2019/08/01/hi/"/>
-    <id>http://heKinKin.github.io/2019/08/01/hi/</id>
+    <title>mac下安装redis教程</title>
+    <link href="http://heKinKin.github.io/2019/08/01/redis/"/>
+    <id>http://heKinKin.github.io/2019/08/01/redis/</id>
     <published>2019-08-01T07:45:49.563Z</published>
-    <updated>2019-08-01T08:43:59.642Z</updated>
+    <updated>2019-08-03T16:00:43.578Z</updated>
     
     <summary type="html">
     
@@ -29,38 +29,16 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;p&gt;1.安装redis之前首先需要下载redis的安装包&lt;br&gt;官网地址：&lt;a href=&quot;https://redis.io/&quot; target=&quot;_blank&quot;
         
       
     
     </summary>
     
-      <category term="你好" scheme="http://heKinKin.github.io/categories/%E4%BD%A0%E5%A5%BD/"/>
+      <category term="redis缓存" scheme="http://heKinKin.github.io/categories/redis%E7%BC%93%E5%AD%98/"/>
     
     
-      <category term="测试" scheme="http://heKinKin.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://heKinKin.github.io/2019/07/31/hello-world/"/>
-    <id>http://heKinKin.github.io/2019/07/31/hello-world/</id>
-    <published>2019-07-31T07:46:29.119Z</published>
-    <updated>2019-07-31T07:46:29.119Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="redis" scheme="http://heKinKin.github.io/tags/redis/"/>
     
   </entry>
   

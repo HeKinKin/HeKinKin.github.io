@@ -4,38 +4,25 @@
   
     
     <entry>
-      <title>hi</title>
-      <link href="/2019/08/01/hi/"/>
-      <url>/2019/08/01/hi/</url>
+      <title>mac下安装redis教程</title>
+      <link href="/2019/08/01/redis/"/>
+      <url>/2019/08/01/redis/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>]]></content>
+        <content type="html"><![CDATA[<p>1.安装redis之前首先需要下载redis的安装包<br>官网地址：<a href="https://redis.io/" target="_blank" rel="noopener">https://redis.io/</a><br>2.点击图示按钮,进行下载并安装<br><img src="https://img-blog.csdnimg.cn/20190729181520777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="下载完"><br>3.安装完成后，将解压缩的文件拷贝纸/usr/local/目录下<br>注：点开访达，command+shit+G,快捷键可快速打开<br><img src="https://img-blog.csdnimg.cn/20190729181830523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190729181950441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.进入文件，执行 sudo make test （编译测试）<br><img src="https://img-blog.csdnimg.cn/20190729182127643.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>编译过程大概需要1min左右，请耐心等待</p><p>。。。</p><p>出现如图所示则是安装成功！<br><img src="https://img-blog.csdnimg.cn/2019072918230095.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5.安装redis: 执行 make install</p><p><img src="https://img-blog.csdnimg.cn/20190729182347124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>至此，redis安装完成。</p><p>6.因为redis还需存放日志等文件在本地，所以还需对redis的配置文件进行更改</p><p>在redis-4.0.14文件目录里新建bin,etc,db三个文件夹</p><p><img src="https://img-blog.csdnimg.cn/20190729182640566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>7.将 /usr/local/redis-4.0.14/src 目录下的 mkreleasehdr.sh, redis-benchmark, redis-check-rdb, redis-cli, redis server 拷贝至 /usr/local/redis-4.0.14/bin 目录下</p><p><img src="https://img-blog.csdnimg.cn/20190729182801392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>8.将/usr/local/redis-4.0.14/redis.conf 拷贝至etc目录下<br><img src="https://img-blog.csdnimg.cn/20190729182927876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>9.右键打开方式-文档编辑，按照如下图所示修改配置文件，每一条都认认真真的改。<br>注：每一条 command+F,精准查找，修改</p><p>#修改为守护模式</p><p>daemonize yes</p><p>#设置进程锁文件</p><p>pidfile /usr/local/redis/redis.pid</p><p>#端口</p><p>port 6379</p><p>#客户端超时时间</p><p>timeout 300</p><p>#日志级别</p><p>loglevel debug</p><p>#日志文件位置</p><p>logfile /usr/local/redis/log-redis.log</p><p>#设置数据库的数量，默认数据库为0，可以使用SELECT <dbid>命令在连接上指定数据库id</dbid></p><p>databases 8</p><p>##指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</p><p>#save <seconds> <changes></changes></seconds></p><p>#Redis默认配置文件中提供了三个条件：</p><p>save 900 1</p><p>save 300 10</p><p>save 60 10000</p><p>#指定存储至本地数据库时是否压缩数据，默认为yes，Redis采用LZF压缩，如果为了节省CPU时间，</p><p>#可以关闭该#选项，但会导致数据库文件变的巨大</p><p>rdbcompression yes</p><p>#指定本地数据库文件名</p><p>dbfilename dump.rdb</p><p>#指定本地数据库路径</p><p>dir /usr/local/redis/db/</p><p>#指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能</p><p>#会在断电时导致一段时间内的数据丢失。因为 redis本身同步数据文件是按上面save条件来同步的，所以有</p><p>#的数据会在一段时间内只存在于内存中</p><p>appendonly no</p><p>#指定更新日志条件，共有3个可选值：</p><p>#no：表示等操作系统进行数据缓存同步到磁盘（快）</p><p>#always：表示每次更新操作后手动调用fsync()将数据写到磁盘（慢，安全）</p><p>#everysec：表示每秒同步一次（折衷，默认值）</p><p>10.配置好文件后，终于要启动redis啦！！！！！！</p><p>启动redis: sudo redis-server /usr/local/redis-4.0.14/etc/redis.conf</p><p><img src="https://img-blog.csdnimg.cn/20190729183359940.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MDg0Mzc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>关闭服务：redis-cli shutdown</p>]]></content>
       
       
       <categories>
           
-          <category> 你好 </category>
+          <category> redis缓存 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> redis </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/07/31/hello-world/"/>
-      <url>/2019/07/31/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
